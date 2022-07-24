@@ -1,0 +1,62 @@
+version: '3'
+services:
+  redis-m1:
+    image: redis
+    container_name: redis-m1
+    ports:
+      - "6371:6371"
+      - "16371:16371"
+    entrypoint: ['redis-server', '/etc/redis/redis.conf']
+    volumes:
+      - ./conf/m1.conf:/etc/redis/redis.conf
+      - ./data/m1:/data
+  redis-m2:
+    image: redis
+    container_name: redis-m2
+    ports:
+      - "6372:6372"
+      - "16372:16372"
+    entrypoint: [ 'redis-server', '/etc/redis/redis.conf' ]
+    volumes:
+      - ./conf/m2.conf:/etc/redis/redis.conf
+      - ./data/m2:/data
+  redis-m3:
+    image: redis
+    container_name: redis-m3
+    ports:
+      - "6373:6373"
+      - "16373:16373"
+    entrypoint: [ 'redis-server', '/etc/redis/redis.conf' ]
+    volumes:
+      - ./conf/m3.conf:/etc/redis/redis.conf
+      - ./data/m3:/data
+  redis-m4:
+    image: redis
+    container_name: redis-m4
+    ports:
+      - "6374:6374"
+      - "16374:16374"
+    entrypoint: [ 'redis-server', '/etc/redis/redis.conf' ]
+    volumes:
+      - ./conf/m4.conf:/etc/redis/redis.conf
+      - ./data/m4:/data
+  redis-m5:
+    image: redis
+    container_name: redis-m5
+    ports:
+      - "6375:6375"
+      - "16375:16375"
+    entrypoint: [ 'redis-server', '/etc/redis/redis.conf' ]
+    volumes:
+      - ./conf/m5.conf:/etc/redis/redis.conf
+      - ./data/m5:/data
+  redis-m6:
+    image: redis
+    container_name: redis-m6
+    ports:
+      - "6376:6376"
+      - "16376:16376"
+    entrypoint: [ 'redis-server', '/etc/redis/redis.conf' ]
+    volumes:
+      - ./conf/m6.conf:/etc/redis/redis.conf
+      - ./data/m6:/data
